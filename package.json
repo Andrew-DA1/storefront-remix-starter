@@ -7,7 +7,7 @@
   "scripts": {
     "build:cf": "cross-env CF_PAGES=1 remix build",
     "build:nf": "cross-env NETLIFY=1 remix build",
-    "build": "remix build",
+    "build": "remix build && node ./node_modules/@netlify/remix-adapter/dist/cli.js",
     "dev:wrangler": "cross-env CF_PAGES=1 wrangler pages dev ./public",
     "dev": "remix dev",
     "postbuild": "npx --yes @netlify/remix-adapter",
