@@ -5,7 +5,7 @@ publish = "public"
 [functions]
 node_bundler = "esbuild"
 
-# Всі маршрути йдуть на сервер Remix (який генерує адаптер)
+# Всі маршрути на сервер Remix (який згенерує адаптер)
 [[redirects]]
 from = "/*"
 to = "/.netlify/functions/server"
