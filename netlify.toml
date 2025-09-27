@@ -1,6 +1,7 @@
 [build]
 command = "npm run build:nf"
 publish = "public"
+functions = ".netlify/functions-internal"  # тут Netlify знайде server.js
 
 [functions]
 directory = ".netlify/functions-internal"
