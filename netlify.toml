@@ -1,16 +1,15 @@
 [build]
-  command = "yarn run build:nf"
-  functions = "netlify/functions"
-  publish = "public"
+command = "npm run build"
+publish = "public"
 
-[dev]
-  command = "remix watch"
-  port = 3000
+[functions]
+node_bundler = "esbuild"
 
+# Усі маршрути віддає сервер Remix (функція)
 [[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/server"
-  status = 200
+from = "/*"
+to = "/.netlify/functions/server"
+status = 200
 
 [[headers]]
   for = "/build/*"
