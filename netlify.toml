@@ -5,11 +5,11 @@ publish = "public"
 [functions]
 node_bundler = "esbuild"
 
-# Усі маршрути віддає сервер Remix (функція)
 [[redirects]]
 from = "/*"
 to = "/.netlify/functions/server"
 status = 200
+
 
 [[headers]]
   for = "/build/*"
