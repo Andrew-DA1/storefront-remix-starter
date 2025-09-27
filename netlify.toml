@@ -5,11 +5,12 @@ publish = "public"
 [functions]
 node_bundler = "esbuild"
 
-# Увімкнути офіційний плагін Netlify для Remix
-[[plugins]]
-package = "@netlify/plugin-remix"
+# Всі маршрути йдуть на сервер Remix (який генерує адаптер)
+[[redirects]]
+from = "/*"
+to = "/.netlify/functions/server"
+status = 200
 
-# Кеш для статичних білд-артефактів Remix
 [[headers]]
   for = "/build/*"
   [headers.values]
